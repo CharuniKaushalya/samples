@@ -4,12 +4,12 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06"
   PolicySchemaVersion="0.3.0.0"
-  TenantId="yourtenant.onmicrosoft.com"
+  TenantId="arctichare.onmicrosoft.com"
   PolicyId="B2C_1A_TOTP_TrustFrameworkExtensions"
-  PublicPolicyUri="http://yourtenant.onmicrosoft.com/B2C_1A_TOTP_TrustFrameworkExtensions">
+  PublicPolicyUri="http://arctichare.onmicrosoft.com/B2C_1A_TOTP_TrustFrameworkExtensions">
 
   <BasePolicy>
-    <TenantId>yourtenant.onmicrosoft.com</TenantId>
+    <TenantId>arctichare.onmicrosoft.com</TenantId>
     <PolicyId>B2C_1A_TrustFrameworkBase</PolicyId>
   </BasePolicy>
   <BuildingBlocks>
@@ -52,7 +52,7 @@
         <!--<LoadUri>~/tenant/default/selfasserted.cshtml</LoadUri>-->
         <LoadUri>https://your-app.azurewebsites.net/selfasserted-appfactor-registration.html</LoadUri>
         <RecoveryUri>~/common/default_page_error.html</RecoveryUri>
-        <DataUri>urn:com:microsoft:aad:b2c:elements:selfasserted:1.1.0</DataUri>
+        <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:1.2.0</DataUri>
         <Metadata>
           <Item Key="DisplayName">App Factor</Item>
         </Metadata>
@@ -117,8 +117,8 @@
                 For more information: https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-create-custom-attributes-profile-edit-custom 
                 Action required: Insert objectId and appId here -->
           <Metadata>
-            <Item Key="ApplicationObjectId">00000000-0000-0000-0000-000000000000</Item>
-            <Item Key="ClientId">00000000-0000-0000-0000-000000000000</Item>
+            <Item Key="ApplicationObjectId">1fc152e3-b2ce-4963-b115-c55c55d75360</Item>
+            <Item Key="ClientId">2de4b7be-1e0e-44b9-a5a5-2077358f5575</Item>
           </Metadata>
         </TechnicalProfile>
 
@@ -230,17 +230,17 @@
         <TechnicalProfile Id="login-NonInteractive">
           <Metadata>
             <!--Demo action required: Change to your ProxyIdentityExperienceFramework App Id-->
-            <Item Key="client_id">00000000-0000-0000-0000-000000000000</Item>
+            <Item Key="client_id">25aadaa9-4140-4eeb-97bf-1d70901e9260</Item>
 
             <!--Demo action required: Change to your IdentityExperienceFramework App Id-->
-            <Item Key="IdTokenAudience">00000000-0000-0000-0000-000000000000</Item>
+            <Item Key="IdTokenAudience">08d794ff8-36f2-4bc4-a11d-db2e7feef877</Item>
           </Metadata>
           <InputClaims>
             <!--Demo action required: Change to your ProxyIdentityExperienceFramework App Id-->
-            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="00000000-0000-0000-0000-000000000000" />
+            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="25aadaa9-4140-4eeb-97bf-1d70901e9260" />
 
             <!--Demo action required: Change to your IdentityExperienceFramework App Id-->
-            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="00000000-0000-0000-0000-000000000000" />
+            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="8d794ff8-36f2-4bc4-a11d-db2e7feef877" />
           </InputClaims>
         </TechnicalProfile>
       </TechnicalProfiles>
